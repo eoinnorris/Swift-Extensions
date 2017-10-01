@@ -1,8 +1,8 @@
-import Cocoa
+import Foundation
 
 extension CIFilter{ 
 
-	class func affineTile(inputTransform:NSAffineTransform)->CIFilter?{ 
+	class func affineTile(inputTransform:CGAffineTransform)->CIFilter?{
 
 		var result:CIFilter? = nil
 		if let filter = CIFilter(name:"CIAffineTile"){ 

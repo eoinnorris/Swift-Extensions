@@ -1,8 +1,8 @@
-import Cocoa
+import Foundation
 
 extension CIFilter{ 
 
-	class func affineTransform(inputTransform:NSAffineTransform)->CIFilter?{ 
+	class func affineTransform(inputTransform:CGAffineTransform)->CIFilter?{ 
 
 		var result:CIFilter? = nil
 		if let filter = CIFilter(name:"CIAffineTransform"){ 

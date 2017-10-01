@@ -1,4 +1,5 @@
-import Cocoa
+import Foundation
+import AVFoundation
 
 extension CIFilter{ 
 
