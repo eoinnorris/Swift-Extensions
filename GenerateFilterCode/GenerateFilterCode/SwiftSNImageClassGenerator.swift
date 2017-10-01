@@ -9,7 +9,7 @@
 import Cocoa
 
 class SwiftClassImageGenerator:SwiftClassFilterGenerator{
-    let uiImageClassTemplate:String = "import CocoaTouch\n\nextension UIImage";
+    let uiImageClassTemplate:String = "import Foundation\n\nextension UIImage";
     
     /*
      func createFilterExtensionClass(filter:Filter)->String{
@@ -56,10 +56,24 @@ class SwiftClassImageGenerator:SwiftClassFilterGenerator{
         return result
     }
     
-    func generateMainBodyFor(filter:Filter)->String{
+    func gennerateFilterParamaters(filter:Filter)->String{
         let name = filter.camelCaseName()
         var result = addIndendation()
-        result += "if let filter = CIFilter.\(name)()"
+        result += "if let filter = CIFilter.\(name)"
+        result += "("
+        for (index,input) in filter.sortedInputs().enumerated(){
+            result += input.getCalledParamTextForFilter()
+            if index < (filter.sortedInputs().count-1){
+                result += ","
+            }
+        }
+        result += ")"
+        return result
+    }
+    
+    func generateMainBodyFor(filter:Filter)->String{
+        var result = ""
+        result += gennerateFilterParamaters(filter:filter)
         result += addBraces()
         result += addIndendation()
         result += "return self.apply(filter:filter)"

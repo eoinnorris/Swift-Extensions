@@ -100,6 +100,11 @@ struct InputAttribute {
     }
     
     
+    func getCalledParamTextForFilter()->String{
+        let result = self.inputType + ":" + self.inputType;
+        return result;
+    }
+    
     /// Create a param to go into the param list of the method
     /// for instance an inputBrightness:Int = 1
     ///
