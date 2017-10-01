@@ -210,6 +210,9 @@
 		2964DF171F811435009F6CCE /* CIFilter+CISixfoldRotatedTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B999EB1F780E0500C9A717 /* CIFilter+CISixfoldRotatedTile.swift */; };
 		2964DF181F811435009F6CCE /* CIFilter+CILabDeltaE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B999EC1F780E0500C9A717 /* CIFilter+CILabDeltaE.swift */; };
 		2964DF191F811435009F6CCE /* CIFilter+CIAreaMaximumAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B999ED1F780E0500C9A717 /* CIFilter+CIAreaMaximumAlpha.swift */; };
+		2964DF1D1F811C5C009F6CCE /* UIImage+CIBokehBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2964DF1C1F811C1C009F6CCE /* UIImage+CIBokehBlur.swift */; };
+		2964DF1E1F811C5F009F6CCE /* UIImage+CIBoxBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2964DF1B1F811C1C009F6CCE /* UIImage+CIBoxBlur.swift */; };
+		2964DF201F811CD5009F6CCE /* UIImage+Apply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2964DF1F1F811CD5009F6CCE /* UIImage+Apply.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +232,9 @@
 		296217F71F7802D6006F3350 /* Filter ExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Filter ExtensionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		296217FC1F7802D6006F3350 /* Filter_ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter_ExtensionsTests.swift; sourceTree = "<group>"; };
 		296217FE1F7802D6006F3350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2964DF1B1F811C1C009F6CCE /* UIImage+CIBoxBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CIBoxBlur.swift"; sourceTree = "<group>"; };
+		2964DF1C1F811C1C009F6CCE /* UIImage+CIBokehBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CIBokehBlur.swift"; sourceTree = "<group>"; };
+		2964DF1F1F811CD5009F6CCE /* UIImage+Apply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Apply.swift"; sourceTree = "<group>"; };
 		29B999251F780E0400C9A717 /* CIFilter+CIPhotoEffectInstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIFilter+CIPhotoEffectInstant.swift"; sourceTree = "<group>"; };
 		29B999261F780E0400C9A717 /* CIFilter+CISRGBToneCurveToLinear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIFilter+CISRGBToneCurveToLinear.swift"; sourceTree = "<group>"; };
 		29B999271F780E0400C9A717 /* CIFilter+CISixfoldReflectedTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIFilter+CISixfoldReflectedTile.swift"; sourceTree = "<group>"; };
@@ -472,7 +478,7 @@
 		296217F01F7802D6006F3350 /* Filter Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2964DE4D1F811301009F6CCE /* UIImage Extensions */,
+				2964DF1A1F811BEE009F6CCE /* UIimage Extensions */,
 				29B999241F780E0400C9A717 /* Filter Extensions */,
 				296217F11F7802D6006F3350 /* Filter_Extensions.h */,
 				296217F21F7802D6006F3350 /* Info.plist */,
@@ -489,12 +495,15 @@
 			path = "Filter ExtensionsTests";
 			sourceTree = "<group>";
 		};
-		2964DE4D1F811301009F6CCE /* UIImage Extensions */ = {
+		2964DF1A1F811BEE009F6CCE /* UIimage Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2964DF1C1F811C1C009F6CCE /* UIImage+CIBokehBlur.swift */,
+				2964DF1B1F811C1C009F6CCE /* UIImage+CIBoxBlur.swift */,
+				2964DF1F1F811CD5009F6CCE /* UIImage+Apply.swift */,
 			);
-			path = "UIImage Extensions";
-			sourceTree = "<group>";
+			path = "UIimage Extensions";
+			sourceTree = SOURCE_ROOT;
 		};
 		29B999241F780E0400C9A717 /* Filter Extensions */ = {
 			isa = PBXGroup;
@@ -960,6 +969,7 @@
 				2964DE7F1F811435009F6CCE /* CIFilter+CIDisplacementDistortion.swift in Sources */,
 				2964DE8E1F811435009F6CCE /* CIFilter+CITriangleKaleidoscope.swift in Sources */,
 				2964DE871F811435009F6CCE /* CIFilter+CITextImageGenerator.swift in Sources */,
+				2964DF1E1F811C5F009F6CCE /* UIImage+CIBoxBlur.swift in Sources */,
 				2964DEEF1F811435009F6CCE /* CIFilter+CIMultiplyCompositing.swift in Sources */,
 				2964DF161F811435009F6CCE /* CIFilter+CIColorBlendMode.swift in Sources */,
 				2964DEC81F811435009F6CCE /* CIFilter+CIRadialGradient.swift in Sources */,
@@ -991,7 +1001,9 @@
 				2964DEE01F811435009F6CCE /* CIFilter+CISunbeamsGenerator.swift in Sources */,
 				2964DEC91F811435009F6CCE /* CIFilter+CIVignetteEffect.swift in Sources */,
 				2964DF051F811435009F6CCE /* CIFilter+CIModTransition.swift in Sources */,
+				2964DF201F811CD5009F6CCE /* UIImage+Apply.swift in Sources */,
 				2964DED51F811435009F6CCE /* CIFilter+CIDepthToDisparity.swift in Sources */,
+				2964DF1D1F811C5C009F6CCE /* UIImage+CIBokehBlur.swift in Sources */,
 				2964DEE81F811435009F6CCE /* CIFilter+CIColorClamp.swift in Sources */,
 				2964DEA61F811435009F6CCE /* CIFilter+CIAdditionCompositing.swift in Sources */,
 				2964DEB41F811435009F6CCE /* CIFilter+CIAffineTransform.swift in Sources */,
