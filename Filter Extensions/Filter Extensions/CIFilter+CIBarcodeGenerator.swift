@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Barcode Generator
+///
+/// - Parameters
+///   - Parameter inputBarcodeDescriptor: 
+/// -  Returns: The filtered image or nil
 	class func barcodeGenerator(inputBarcodeDescriptor:CIBarcodeDescriptor)->CIFilter?{ 
 
 		var result:CIFilter? = nil

@@ -1,7 +1,14 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Color Polynomial
+///
+/// - Parameters
+///   - Parameter inputGreenCoefficients: Polynomial coefficients for green channel
+///   - Parameter inputBlueCoefficients: Polynomial coefficients for blue channel
+///   - Parameter inputRedCoefficients: Polynomial coefficients for red channel
+///   - Parameter inputAlphaCoefficients: Polynomial coefficients for alpha channel
+/// -  Returns: The filtered image or nil
 	class func colorPolynomial(inputGreenCoefficients:CIVector,inputBlueCoefficients:CIVector,inputRedCoefficients:CIVector,inputAlphaCoefficients:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

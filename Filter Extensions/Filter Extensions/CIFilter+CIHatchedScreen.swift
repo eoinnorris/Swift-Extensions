@@ -1,7 +1,14 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Hatched Screen
+///
+/// - Parameters
+///   - Parameter inputCenter: The x and y position to use as the center of the hatched screen pattern
+///   - Parameter inputAngle: The angle of the pattern.
+///   - Parameter inputWidth: The distance between lines in the pattern.
+///   - Parameter inputSharpness: The amount of sharpening to apply.
+/// -  Returns: The filtered image or nil
 	class func hatchedScreen(inputCenter:CIVector,inputAngle:Double = 0,inputWidth:Double = 6,inputSharpness:CGColorSpace)->CIFilter?{ 
 
 		var result:CIFilter? = nil

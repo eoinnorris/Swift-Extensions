@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Morphology Maximum
+///
+/// - Parameters
+///   - Parameter inputRadius: The desired radius of the circular morphological operation to the image.
+/// -  Returns: The filtered image or nil
 	class func morphologyMaximum(inputRadius:Double = 0)->CIFilter?{ 
 
 		var result:CIFilter? = nil

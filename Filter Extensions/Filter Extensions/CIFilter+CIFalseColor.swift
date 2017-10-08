@@ -1,7 +1,12 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// False Color
+///
+/// - Parameters
+///   - Parameter inputColor0: The first color to use for the color ramp.
+///   - Parameter inputColor1: The second color to use for the color ramp.
+/// -  Returns: The filtered image or nil
 	class func falseColor(inputColor0:CIColor,inputColor1:CIColor)->CIFilter?{ 
 
 		var result:CIFilter? = nil

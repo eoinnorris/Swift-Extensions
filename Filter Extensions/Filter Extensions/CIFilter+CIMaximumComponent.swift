@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
+/// Maximum Component
+///
+/// - Parameters
 
+/// -  Returns: The filtered image or nil
 	class func maximumComponent()->CIFilter?{ 
 
 		var result:CIFilter? = nil

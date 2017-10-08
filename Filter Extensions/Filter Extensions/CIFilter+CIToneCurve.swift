@@ -1,7 +1,15 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Tone Curve
+///
+/// - Parameters
+///   - Parameter inputPoint1: 
+///   - Parameter inputPoint4: 
+///   - Parameter inputPoint0: 
+///   - Parameter inputPoint3: 
+///   - Parameter inputPoint2: 
+/// -  Returns: The filtered image or nil
 	class func toneCurve(inputPoint1:CIVector,inputPoint4:CIVector,inputPoint0:CIVector,inputPoint3:CIVector,inputPoint2:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

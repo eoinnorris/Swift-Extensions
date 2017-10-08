@@ -1,7 +1,14 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Text Image Generator
+///
+/// - Parameters
+///   - Parameter inputFontSize: 
+///   - Parameter inputScaleFactor: 
+///   - Parameter inputFontName: 
+///   - Parameter inputText: 
+/// -  Returns: The filtered image or nil
 	class func textImageGenerator(inputFontSize:Double = 12,inputScaleFactor:Double = 1,inputFontName:String = "HelveticaNeue",inputText:NSString)->CIFilter?{ 
 
 		var result:CIFilter? = nil

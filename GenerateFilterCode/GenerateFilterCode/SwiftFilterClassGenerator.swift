@@ -165,7 +165,39 @@ class SwiftClassFilterGenerator{
         return result
     }
     
- 
+    func addCommentsReturnType()->String{
+        return newline + "/// -  Returns: The filtered image or nil";
+    }
+    
+    
+    
+    
+    /// Add comments
+    ///
+    /// - Parameter filter: The filter to generate comments for
+    /// - Returns: a generate comment for this function
+ func addComments(filter:Filter)->String{
+        if let description = filter.description{
+            var result = "///" + " \(description)"
+            result += newline + "///"
+            result += newline
+            result += "/// - Parameters"
+            result += newline
+            
+            
+            for (index,input) in filter.sortedInputs().enumerated(){
+                result += "///   - Parameter \(input.getParamDescription())"
+                if index < (filter.sortedInputs().count-1){
+                    result += newline
+                }
+            }
+            
+            result += addCommentsReturnType()
+            
+            return result
+        }
+        return ""
+    }
     
     /// The main method to generate the output code to use this filter in swift
     ///
@@ -175,6 +207,7 @@ class SwiftClassFilterGenerator{
     func createFilterExtensionClass(filter:Filter)->String{
         var result = ciFilterClassTemplate
         result += addBraces()
+        result += addComments(filter:filter)
         result += addNewLineAndIndentation()
         result += generateFunctionName(filter: filter)
         result += addLocaVariableInstantiation()

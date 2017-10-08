@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Crop
+///
+/// - Parameters
+///   - Parameter inputRectangle: The rectangle that specifies the crop to apply to the image.
+/// -  Returns: The filtered image or nil
 	class func crop(inputRectangle:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

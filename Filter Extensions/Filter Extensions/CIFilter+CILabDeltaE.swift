@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Lab ∆E
+///
+/// - Parameters
+///   - Parameter inputImage2: 
+/// -  Returns: The filtered image or nil
 	class func labDeltaE(inputImage2:CIImage)->CIFilter?{ 
 
 		var result:CIFilter? = nil

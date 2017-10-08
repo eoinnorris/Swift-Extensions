@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-
 class SwiftClassImageGenerator:SwiftClassFilterGenerator{
     let uiImageClassTemplate:String = "import Foundation\n\nextension UIImage";
     
@@ -39,6 +38,8 @@ class SwiftClassImageGenerator:SwiftClassFilterGenerator{
      return self
      }
      */
+    
+    
     
     override func generateFunctionName(filter:Filter)->String{
         
@@ -81,15 +82,32 @@ class SwiftClassImageGenerator:SwiftClassFilterGenerator{
         return result
     }
     
+    
+    /// creates return code, or nil
+    ///
+    /// - Returns: return value or nil
     func generateResultCode()->String{
         var result = addNewLineAndIndentation()
         result += "return nil"
         return result
     }
     
+    
+    override func addCommentsReturnType()->String{
+        return newline + "/// -  Returns: The filtered image or nil";
+    }
+    
+    
+    
+    /// Main method to create the class extension and the single method
+    ///
+    /// - Parameter filter: The filter to generate the class extension
+    /// - Returns: the class extension for this filter
+    
     func createImageExtensionClass(filter:Filter)->String{
         var result = uiImageClassTemplate
         result += addBraces()
+        result += addComments(filter:filter)
         result += addNewLineAndIndentation()
         result += generateFunctionName(filter:filter)
         result += generateMainBodyFor(filter:filter)

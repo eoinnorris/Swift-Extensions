@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
+/// Depth To Disparity
+///
+/// - Parameters
 
+/// -  Returns: The filtered image or nil
 	class func depthToDisparity()->CIFilter?{ 
 
 		var result:CIFilter? = nil

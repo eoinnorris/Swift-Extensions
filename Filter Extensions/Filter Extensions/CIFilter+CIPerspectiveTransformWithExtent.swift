@@ -1,7 +1,15 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Perspective Transform with Extent
+///
+/// - Parameters
+///   - Parameter inputExtent: A rectangle that defines the extent of the effect.
+///   - Parameter inputBottomRight: 
+///   - Parameter inputBottomLeft: 
+///   - Parameter inputTopRight: 
+///   - Parameter inputTopLeft: 
+/// -  Returns: The filtered image or nil
 	class func perspectiveTransformWithExtent(inputExtent:CIVector,inputBottomRight:CIVector,inputBottomLeft:CIVector,inputTopRight:CIVector,inputTopLeft:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

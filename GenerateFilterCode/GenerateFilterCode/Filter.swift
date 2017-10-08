@@ -73,9 +73,12 @@ class Filter{
         switch filterType {
         case .nameKey:
             self.description = valueObj as? String
+            
         }
+        
     }
     
+
     
     /// Store the input values
     ///

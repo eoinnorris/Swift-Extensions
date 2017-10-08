@@ -1,7 +1,22 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// PDF417 Barcode Generator
+///
+/// - Parameters
+///   - Parameter inputCorrectionLevel: 
+///   - Parameter inputAlwaysSpecifyCompaction: 
+///   - Parameter inputDataColumns: 
+///   - Parameter inputMessage: 
+///   - Parameter inputMinHeight: 
+///   - Parameter inputCompactStyle: 
+///   - Parameter inputMaxWidth: 
+///   - Parameter inputPreferredAspectRatio: 
+///   - Parameter inputRows: 
+///   - Parameter inputMaxHeight: 
+///   - Parameter inputCompactionMode: 
+///   - Parameter inputMinWidth: 
+/// -  Returns: The filtered image or nil
 	class func pDF417BarcodeGenerator(inputCorrectionLevel:Double,inputAlwaysSpecifyCompaction:Double,inputDataColumns:Double,inputMessage:NSData,inputMinHeight:Double,inputCompactStyle:Double,inputMaxWidth:Double,inputPreferredAspectRatio:Double,inputRows:Double,inputMaxHeight:Double,inputCompactionMode:Double,inputMinWidth:Double)->CIFilter?{ 
 
 		var result:CIFilter? = nil

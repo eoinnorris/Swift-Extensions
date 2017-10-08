@@ -1,7 +1,16 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Droste
+///
+/// - Parameters
+///   - Parameter inputInsetPoint1: 
+///   - Parameter inputZoom: 
+///   - Parameter inputRotation: 
+///   - Parameter inputStrands: 
+///   - Parameter inputPeriodicity: 
+///   - Parameter inputInsetPoint0: 
+/// -  Returns: The filtered image or nil
 	class func droste(inputInsetPoint1:CIVector,inputZoom:Double = 1,inputRotation:Double = 0,inputStrands:Double = 1,inputPeriodicity:Double = 1,inputInsetPoint0:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

@@ -1,7 +1,13 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Twelvefold Reflected Tile
+///
+/// - Parameters
+///   - Parameter inputCenter: The x and y position to use as the center of the effect
+///   - Parameter inputAngle: The angle (in radians) of the tiled pattern.
+///   - Parameter inputWidth: The width of a tile.
+/// -  Returns: The filtered image or nil
 	class func twelvefoldReflectedTile(inputCenter:CIVector,inputAngle:Double = 0,inputWidth:Double = 100)->CIFilter?{ 
 
 		var result:CIFilter? = nil

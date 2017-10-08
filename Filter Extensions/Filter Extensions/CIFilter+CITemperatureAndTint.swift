@@ -1,7 +1,12 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Temperature and Tint
+///
+/// - Parameters
+///   - Parameter inputNeutral: 
+///   - Parameter inputTargetNeutral: 
+/// -  Returns: The filtered image or nil
 	class func temperatureAndTint(inputNeutral:CIVector,inputTargetNeutral:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

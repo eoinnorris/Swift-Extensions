@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
+/// Mask to Alpha
+///
+/// - Parameters
 
+/// -  Returns: The filtered image or nil
 	class func maskToAlpha()->CIFilter?{ 
 
 		var result:CIFilter? = nil

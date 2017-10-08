@@ -1,7 +1,11 @@
 import Foundation
 
 extension CIFilter{ 
+/// Color Invert
+///
+/// - Parameters
 
+/// -  Returns: The filtered image or nil
 	class func colorInvert()->CIFilter?{ 
 
 		var result:CIFilter? = nil

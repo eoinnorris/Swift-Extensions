@@ -1,7 +1,15 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Color Cubes Mixed With Mask
+///
+/// - Parameters
+///   - Parameter inputMaskImage: A masking image.
+///   - Parameter inputCube0Data: 
+///   - Parameter inputCube1Data: 
+///   - Parameter inputCubeDimension: 
+///   - Parameter inputColorSpace: 
+/// -  Returns: The filtered image or nil
 	class func colorCubesMixedWithMask(inputMaskImage:CIImage,inputCube0Data:NSData,inputCube1Data:NSData,inputCubeDimension:Double = 2,inputColorSpace:NSObject)->CIFilter?{ 
 
 		var result:CIFilter? = nil

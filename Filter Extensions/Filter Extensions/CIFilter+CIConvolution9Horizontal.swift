@@ -1,7 +1,12 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Horizontal 9 Convolution
+///
+/// - Parameters
+///   - Parameter inputBias: 
+///   - Parameter inputWeights: 
+/// -  Returns: The filtered image or nil
 	class func convolution9Horizontal(inputBias:Double = 0,inputWeights:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

@@ -1,7 +1,13 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Color Cube with ColorSpace
+///
+/// - Parameters
+///   - Parameter inputCubeDimension: 
+///   - Parameter inputCubeData: 
+///   - Parameter inputColorSpace: 
+/// -  Returns: The filtered image or nil
 	class func colorCubeWithColorSpace(inputCubeDimension:Double = 2,inputCubeData:NSData,inputColorSpace:NSObject)->CIFilter?{ 
 
 		var result:CIFilter? = nil

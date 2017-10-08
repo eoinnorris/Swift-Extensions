@@ -1,7 +1,13 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// Color Curves
+///
+/// - Parameters
+///   - Parameter inputCurvesDomain: 
+///   - Parameter inputCurvesData: 
+///   - Parameter inputColorSpace: 
+/// -  Returns: The filtered image or nil
 	class func colorCurves(inputCurvesDomain:CIVector,inputCurvesData:NSData,inputColorSpace:NSObject)->CIFilter?{ 
 
 		var result:CIFilter? = nil

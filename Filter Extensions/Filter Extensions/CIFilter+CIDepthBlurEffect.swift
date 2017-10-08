@@ -2,7 +2,21 @@ import Foundation
 import AVFoundation
 
 extension CIFilter{ 
-
+/// Depth Blur Effect
+///
+/// - Parameters
+///   - Parameter inputDisparityImage: 
+///   - Parameter inputRightEyePositions: 
+///   - Parameter inputCalibrationData: 
+///   - Parameter inputChinPositions: 
+///   - Parameter inputLeftEyePositions: 
+///   - Parameter inputAuxDataMetadata: 
+///   - Parameter inputAperture: 
+///   - Parameter inputNosePositions: 
+///   - Parameter inputLumaNoiseScale: 
+///   - Parameter inputScaleFactor: 
+///   - Parameter inputFocusRect: 
+/// -  Returns: The filtered image or nil
 	class func depthBlurEffect(inputDisparityImage:CIImage,inputRightEyePositions:CIVector,inputCalibrationData:AVCameraCalibrationData,inputChinPositions:CIVector,inputLeftEyePositions:CIVector,inputAuxDataMetadata:NSDictionary,inputAperture:Double = 0,inputNosePositions:CIVector,inputLumaNoiseScale:Double = 0,inputScaleFactor:Double = 1,inputFocusRect:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil

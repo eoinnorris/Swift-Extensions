@@ -1,5 +1,4 @@
 import Foundation
-import AVFoundation
 
 extension UIImage{ 
 /// Depth Blur Effect

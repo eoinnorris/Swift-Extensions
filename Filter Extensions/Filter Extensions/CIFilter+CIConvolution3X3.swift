@@ -1,7 +1,12 @@
 import Foundation
 
 extension CIFilter{ 
-
+/// 3 by 3 convolution
+///
+/// - Parameters
+///   - Parameter inputBias: 
+///   - Parameter inputWeights: 
+/// -  Returns: The filtered image or nil
 	class func convolution3X3(inputBias:Double = 0,inputWeights:CIVector)->CIFilter?{ 
 
 		var result:CIFilter? = nil
